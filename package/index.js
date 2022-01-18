@@ -1,3 +1,6 @@
-// is ok?
-// git is OK
-// 同步一下远程和本地文件
+import components from "./components";
+export default{
+  install(app){
+    components.forEach(v => app.component(v.name,v))
+  }
+}

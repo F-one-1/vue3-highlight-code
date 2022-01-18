@@ -1,11 +1,11 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <mg-code tag="../components/HelloWorld"/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
   components: {

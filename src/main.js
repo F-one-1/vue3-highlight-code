@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import mg from '../package/index'
+const app = createApp(App)
+app.use(mg)
+app.mount('#app')
