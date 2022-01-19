@@ -63,7 +63,8 @@ export default {
 
 > The important thing，I suggest that you use the **File path**. Even it is a small amount of code. 
 
-![wecom-temp-5a6759e5948a604eb470c052062a0ce3](/Users/fanyan/Library/Application Support/typora-user-images/wecom-temp-5a6759e5948a604eb470c052062a0ce3.png)
+![wecom-temp-5a6759e5948a604eb470c052062a0ce3](https://user-images.githubusercontent.com/68687740/150127033-33cb187c-5b4f-4453-b4d3-02dfd5c35c3c.png)
+
 
 ## 📚 API
 
@@ -94,4 +95,4 @@ that is same as the drag-code,but it only has the code,No drag
 
 `<drag-code>` 
 
-![wecom-temp-dfb957e29284ac14367e3fd899ed27ac](/var/folders/fp/7v1jmky11lvbqcjkcf_wwc1r0000gq/T/com.tencent.WeWorkMac/wecom-temp-dfb957e29284ac14367e3fd899ed27ac.png)
+![wecom-temp-dfb957e29284ac14367e3fd899ed27ac](https://user-images.githubusercontent.com/68687740/150127066-1c60f123-d108-4ea9-9f23-960910960499.png)
