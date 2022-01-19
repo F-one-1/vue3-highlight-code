@@ -85,7 +85,6 @@ File suffix type
 
 Highlight the route of the code file
 
----
 
 #### result
 
