@@ -8,7 +8,7 @@
 
 **Via [npm](https://www.npmjs.com):**
 
-[![npm](https://nodei.co/npm/vue3-highlight-code.js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/vue3-highlight-code)
+[![npm](https://nodei.co/npm/vue3-highlight-code.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/vue3-highlight-code)
 
 ```bash
 npm install highlight.js vue3-highlight-code text-loader
