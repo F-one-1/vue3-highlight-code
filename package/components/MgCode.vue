@@ -2,15 +2,21 @@
   <div class="code">
     <div
       class="code-content"
-      >
+      v-if="component">
+      <component :is="currentLayout"/>
     </div>
     <div
       class="code--segment"
-      v-if="true">
+      v-if="isShow">
       <highlightjs
         language="vue"
         :code="currentCode"
       />
+    </div>
+    <div
+      class="code--button"
+      @click="onToggle">
+      {{ codeTextBtn }}
     </div>
   </div>
 </template>
@@ -20,7 +26,7 @@ import 'highlight.js/lib/common';
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 
   export default {
-    name: 'HgCode',
+    name: 'MgCode',
     components: {
         highlightjs: hljsVuePlugin.component
     },
@@ -30,7 +36,6 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
       },
       tag: {
         type: String,
-        required: true
         // 文件的相对路径
       },
       suffix: {

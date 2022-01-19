@@ -1,25 +1,26 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  
-  <mg-code tag="HelloWorld"/>
-  <mg-code tag="index"  suffix='js'>ß
-  </mg-code>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+  <drag-code tag="HelloWorld" :code="currentCode1" suffix="js"/>
+  <drag-code tag="HelloWorld" :code="currentCode" suffix="vue"/>
+  <hg-code tag="HelloWorld" :code="currentCode" suffix="vue"/>
+
 </template>
 
 <script>
-import HelloWorld from '../package/components/HelloWorld.vue'
+
 
 export default {
+
   name: 'App',
   components: {
-    HelloWorld
+  },
+  computed: {
+    currentCode() { 
+      return require('!!text-loader!./components/' + 'HelloWorld' + '.' + 'vue')
+    },
+    currentCode1() {
+      return require('!!text-loader!./' + 'main' + '.' + 'js')
+    }
   }
 }
 </script>

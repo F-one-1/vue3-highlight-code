@@ -1,9 +1,9 @@
 <template>
   <div class="code">
-    <div
+    <!-- <div
       class="code-content"
       >
-    </div>
+    </div> -->
     <div
       class="code--segment"
       v-if="true">
@@ -25,12 +25,8 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
         highlightjs: hljsVuePlugin.component
     },
     props: {
-      path: {
-        type: String,
-      },
       tag: {
         type: String,
-        required: true
         // 文件的相对路径
       },
       suffix: {
@@ -54,9 +50,6 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
       codeTextBtn() {
         return this.isShow ? 'close' : 'open'
       },
-      currentLayout() {
-        return require('./' + this.tag + '.' + this.suffix).default
-      },
       currentCode() { 
         return this.code || require('!!text-loader!./' + this.tag + '.' + this.suffix)
       }
@@ -76,9 +69,7 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
   @import "../styles/palette.styl"
 
   .code
-    margin: 20px 0;
-    border: 1px solid #ebebeb
-    overflow: hidden
+    overflow: hidden;
 
     &:hover
       box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6), 0 2px 4px 0 rgba(232, 237, 250, .5)

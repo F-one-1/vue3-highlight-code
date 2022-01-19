@@ -6,11 +6,16 @@
     </div>
     <div
       class="code--segment"
-      v-if="true">
+      v-if="isShow">
       <highlightjs
         language="vue"
         :code="currentCode"
       />
+    </div>
+    <div
+      class="code--button"
+      @click="onToggle">
+      {{ codeTextBtn }}
     </div>
   </div>
 </template>
@@ -20,17 +25,13 @@ import 'highlight.js/lib/common';
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 
   export default {
-    name: 'HgCode',
+    name: 'DragCode',
     components: {
         highlightjs: hljsVuePlugin.component
     },
     props: {
-      path: {
-        type: String,
-      },
       tag: {
         type: String,
-        required: true
         // 文件的相对路径
       },
       suffix: {
@@ -53,9 +54,6 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
     computed: {
       codeTextBtn() {
         return this.isShow ? 'close' : 'open'
-      },
-      currentLayout() {
-        return require('./' + this.tag + '.' + this.suffix).default
       },
       currentCode() { 
         return this.code || require('!!text-loader!./' + this.tag + '.' + this.suffix)
