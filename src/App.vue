@@ -1,11 +1,21 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  
+  <mg-code tag="HelloWorld"/>
+  <mg-code tag="index"  suffix='js'>ß
+  </mg-code>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <mg-code tag="../components/HelloWorld"/>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from '../package/components/HelloWorld.vue'
+
 export default {
   name: 'App',
   components: {
@@ -14,7 +24,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -34,6 +34,7 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
       tag: {
         type: String,
         required: true
+        // 文件的相对路径
       },
       suffix: {
         type: String,
@@ -62,6 +63,7 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
     },
     methods: {
       onToggle() {
+        console.log(1)
         this.isShow = !this.isShow
       }
     }
