@@ -59,7 +59,7 @@ export default {
 
 > The important thing，I suggest that you use the **File path**. Even it is a small amount of code. 
 
-#### [demo](https://github.com/F-one-1/vue3-test) quickly start to try vue3-highlight
+### [demo](https://github.com/F-one-1/vue3-test) quickly start to try vue3-highlight
 
 
 ## 📚 API
