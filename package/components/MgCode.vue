@@ -63,7 +63,7 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
         return require('./' + this.tag + '.' + this.suffix).default
       },
       currentCode() { 
-        return this.code || require('!!text-loader!./' + this.tag + '.' + this.suffix)
+        return this.code || require('!!text-loader!' + this.tag + '.' + this.suffix)
       }
     },
     methods: {

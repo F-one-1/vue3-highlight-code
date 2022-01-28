@@ -25,7 +25,7 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
         highlightjs: hljsVuePlugin.component
     },
     props: {
-      tag: {
+      path: {
         type: String,
         // 文件的相对路径
       },
@@ -51,7 +51,7 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
         return this.isShow ? 'close' : 'open'
       },
       currentCode() { 
-        return this.code || require('!!text-loader!./' + this.tag + '.' + this.suffix)
+        return this.code || require('!!text-loader!' + this.path + '.' + this.suffix)
       }
     },
     methods: {

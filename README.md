@@ -38,10 +38,8 @@ app.mount('#app')
 **Vue file**
 
 ```vue
-// App.vue
 <template>
   <drag-code :code="currentCode" suffix="vue"></drag-code>
-  <drag-code :code="currentCode1" suffix="vue"></drag-code>
 </template>
 
 <script>
@@ -51,11 +49,9 @@ export default {
   },
   computed: {
       currentCode() { 
-        return require('!!text-loader!./' + 'components/HelloWorld')
+        return require('!!text-loader!' + '../App')
+        // the format is require('!!text-loader!'+'relative path')
       },
-      currentCode1() { 
-        return require('!!text-loader!./' + 'components/demo/index')
-      }
     },
 }
 </script>
@@ -63,7 +59,7 @@ export default {
 
 > The important thing，I suggest that you use the **File path**. Even it is a small amount of code. 
 
-![wecom-temp-5a6759e5948a604eb470c052062a0ce3](https://user-images.githubusercontent.com/68687740/150127033-33cb187c-5b4f-4453-b4d3-02dfd5c35c3c.png)
+#### [demo](https://github.com/F-one-1/vue3-test) quickly start to try vue3-highlight
 
 
 ## 📚 API
@@ -78,13 +74,23 @@ Highlight.js code block.
 
 File suffix type
 
+ #### tag
+
+Type: String
+
+Relative path of the file 
+
+> if you use code,the suffix and tag will be ignore
+
 #### 🔰 :code
 
 ##### code
 
 **Type:** `String`
 
-Highlight the route of the code file
+Highlight code 
+
+> you can use the You can pass in the code in the form of text loader
 
 
 #### result
@@ -93,6 +99,8 @@ Highlight the route of the code file
 
 that is same as the drag-code,but it only has the code,No drag
 
-`<drag-code>` 
+```
+<drag-code>
+```
 
 ![wecom-temp-dfb957e29284ac14367e3fd899ed27ac](https://user-images.githubusercontent.com/68687740/150127066-1c60f123-d108-4ea9-9f23-960910960499.png)
