@@ -51,7 +51,7 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
         return this.isShow ? 'close' : 'open'
       },
       currentCode() { 
-        return this.code || require('!!text-loader!' + this.path + '.' + this.suffix)
+        return this.code || require(this.path + '.' + this.suffix)
       }
     },
     methods: {
